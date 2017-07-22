@@ -1,0 +1,24 @@
+<div class="carouselWrapper">
+
+<div class="productImg">
+  <img src="{{targetImg}}">
+</div>
+<div class="carouelParent">
+    <div class="checLeft"  (click)="back()">   
+  </div>
+    <div class="carouselInner">
+      <div class="carouselParent">
+        <li *ngFor="let index of propertyArray;" [style.left]="index.left" [style.border]="index.border" >
+          <div class="active imgWrapper">
+             <img src="{{index.imageSrc}}">      
+          </div>
+        </li>
+      </div>
+    </div>
+  <div class="chevRight"  (click)="proceed()">  
+  </div>
+</div>
+
+
+</div>
+  

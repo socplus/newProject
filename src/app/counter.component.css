@@ -1,0 +1,40 @@
+.counter button{
+	border-radius: 50%;
+    color: #fff;
+    /* font-weight: bold; */
+    font-size: 26px;
+    padding: 5px 4px;
+       width: 25px;
+    height: 25px;
+    line-height: 15px;
+        margin: 0 10px;
+        background-color: #d0ccc7;
+            outline: none;
+    border: 0;
+    
+   
+}
+.counter span{
+	font-size: 0.9em;
+	color: #000;
+    position: relative;
+    top: -3px;
+}
+.counter{
+	    display: inline-block;
+    border: 1px solid #d2ceca;
+    border-radius: 2px;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.buttonWrapper{
+	padding-left: 20px;
+	display: inline-flex;
+}
+.counterVal{
+	font-weight: bold;
+	color:#000;
+	    line-height: 26px;
+    font-size: 16px;
+}

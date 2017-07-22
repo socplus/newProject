@@ -1,0 +1,100 @@
+<div class="productInfo">
+<div class="productInfoWrapper">
+<div class="productInfoLeft">
+<div class="productTitle">{{productInfo.title}}</div>
+
+
+<div class="carousel">
+<carousel></carousel>
+</div>
+
+</div>
+
+<!--left-->
+<div class="productInfoRight">
+<div class="productPrice">
+<div class="priceFont">{{price}}</div>
+<div class="pricetype">{{priceQualifier}}</div>
+</div>
+
+<!--second-->
+<div class="productDescription">
+<ul>
+<li *ngFor="let desc of shortDescrpPromotion;">
+<span class="iconSvg"></span> <div class="badge">{{desc}}</div>
+</li>
+</ul>
+</div>
+<counter></counter>
+<div class="productAction">
+<button *ngIf="showPickUp" class="btnProduct pickup">PICK UP IN THE STORE</button>
+<button *ngIf="showAddToCart" class="btnProduct addtoCart">ADD TO CART</button>
+</div>
+<div class="prooductReturn">
+<span>Return</span>
+<p>This item must be returned within 30 days of the ship date. See return policy for detail. Prices, stores, may vary by store and online.</p>
+</div>
+<div class="productExtraAction">
+<button class="btnExtrasProduct ">ADD TO REGISTRY</button>
+<button class="btnExtrasProduct ">ADD TO LIST</button>
+<button class="btnExtrasProduct ">SHARE</button>
+</div>
+<div class="productHightlights">
+<h3>Product Highlights</h3>
+<ul>
+<li *ngFor="let property of features;">
+<div [innerHTML]="property"></div>
+</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div class="reviewWrapper">
+<div class="reviewsection">
+<div class="leftLink">
+<star-rating name="overall"></star-rating>
+<span>overall</span>
+</div>
+<div class="rightLink">view all {{totalReviews}} reviews
+</div>
+</div>
+
+
+<div class="proConPart">
+
+<div class="pro">
+<div class="proTitle">
+<p>PRO</p>
+
+</div>
+<div class="lower">
+<star-rating name="pro"></star-rating>
+<span class="bold">{{review.pro.title}}</span>                   
+<div class="review">{{review.pro.review}}</div>
+<span class="name">{{review.pro.screenName}}</span>
+<span class="date">{{review.pro.date}}</span>
+</div>
+
+</div>
+<div class="con">
+<div class="conTitle">
+<p>CON</p>
+
+</div>
+
+<div class="lower">
+<star-rating name="con"></star-rating>
+<span class="bold">{{review.con.title}}</span>
+
+<div class="review">{{review.con.review}}</div>
+<span class="name">{{review.con.screenName}}</span>
+<span class="date">{{review.con.date}}</span>
+</div>
+</div>
+</div>
+</div>
+
+
+</div>

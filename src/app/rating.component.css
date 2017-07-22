@@ -1,0 +1,29 @@
+div{
+	display: flex;
+	
+	margin-bottom: 5px;
+	}
+.starColoredSvg{
+  background-image: url('./app/svg/star-colored.svg');
+  
+}
+.starColoredSvg, .starSvg {
+	background-repeat: no-repeat;
+ height: 20px;
+    width: 20px;
+  float: left;
+}
+.starSvg{
+  background-image: url('./app/svg/star.svg');
+ 
+}
+
+@media only screen and (max-width: 720px) {
+			.starColoredSvg, .starSvg{
+				background-repeat: no-repeat;
+			    height: 12px;
+			    width: 12px;
+			    float: left;
+			    background-size: contain;
+			}
+}

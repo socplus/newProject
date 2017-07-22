@@ -1,0 +1,314 @@
+body{
+margin: 0 !important;
+}
+
+h1 {
+font-size: 1.2em;
+color: #999;
+margin-bottom: 0;
+}
+h2 {
+font-size: 2em;
+margin-top: 0;
+padding-top: 0;
+}
+nav a {
+padding: 5px 10px;
+text-decoration: none;
+margin-top: 10px;
+display: inline-block;
+background-color: #eee;
+border-radius: 4px;
+}
+nav a:visited, a:link {
+color: #607D8B;
+}
+nav a:hover {
+color: #039be5;
+background-color: #CFD8DC;
+}
+nav a.active {
+color: #039be5;
+}
+
+.productInfo{
+width: 1000px;
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+margin: auto;
+flex-wrap: nowrap;
+}
+.productInfoWrapper{
+display: flex;
+}
+.reviewWrapper{
+width: 50%;
+}
+.productInfoLeft{
+align-items: center;
+}
+.productInfoLeft, .productInfoRight{
+width: 50%;
+height: 100%;
+display: flex;
+flex-direction: column;
+margin: 10px;
+
+}
+.productInfoRight{
+
+}
+.productTitle{
+width: 80%;
+color: black;
+overflow: hidden;
+font-size: 1.65em;
+}
+.productPrice{
+margin:5px;
+padding-bottom: 40px;
+width: 100%;
+border-bottom: 1px solid #ccc;
+}
+.productDescription{
+border-bottom: 1px solid #e2e2e2;
+}
+
+.productDescription li{
+margin: 5px 0px;
+}
+.priceFont{
+font-size: 1.35em;
+color: #000;
+display: inline-block;
+}
+.pricetype{
+display: inline-block;
+}
+.icon::before{
+
+content: "";
+display: inline-block;
+}
+ul{
+list-style: none;
+padding: 0;
+}
+.productHightlights ul{
+list-style: disc;
+padding-left: 15px;
+}
+.productDescription .badge{
+color:red;
+font-size: 12px;
+margin-left: 20px;
+}
+.productAction, .prooductReturn, .productExtraAction{
+margin-top: 20px;
+}
+.pickup{
+background: black;
+color:white;
+
+padding: 10px 20px;
+min-width: 190px;
+}
+.addtoCart{
+background: #e70000;
+color: white;
+padding: 10px 20px;
+min-width: 190px;
+
+}
+.productHightlights h3{
+color: black;
+font-weight: bold;
+}
+.prooductReturn{
+display: flex;
+flex-direction: row;
+}
+
+.prooductReturn span{
+font-size: 12px;
+padding: 0 5px;
+}
+.prooductReturn p{
+font-size: 12px;
+margin: 0 !important;
+border-left: 2px solid #e2e2e2;
+padding: 0 5px;
+}
+.productExtraAction{
+display: flex;
+flex-direction: row;
+}
+.btnExtrasProduct{
+height: 17px;
+font-size: 10px;
+line-height: 0;
+flex-grow: 1;
+margin: 2px;
+background: #f4f3f2;
+}
+.productHightlights{
+
+}
+
+.productHightlights p{
+color:black;
+font-size: 20px;
+}
+.productImg{
+
+width: calc(100% - 20vh);
+height: calc(100% - 60vh);
+
+margin: 20px 10px;
+}
+.carousel{
+height: 140px;
+width: 100%;
+}
+.reviewsection{
+height: 50px;
+width: 100%;
+}
+
+.reviewsection{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+.leftLink, .rightLink{
+color:black;
+font-size: 12px;
+font-weight: bold;
+display: flex;
+flex-direction: row;
+}
+.proConPart{
+display: flex;
+flex-direction: row;
+width: 100%;
+background: #f6f5f4;
+padding: 10px;
+box-sizing: border-box;
+}
+.pro, .con{
+flex: 1;
+
+}
+.proTitle, .conTitle{
+color:#b9b9b7;
+border-bottom: 2px solid #e2e2e2;
+
+}
+.proTitle p, .conTitle p{
+margin:5px 0px;
+}
+
+.proTitle span, .conTitle span{
+font-size: 12px;
+color:#a1a1a1;
+}
+.lower{
+margin: 10px;
+font-size: 11px;
+}
+.bold{
+font-size: 14px;
+font-weight: bold;
+color:#000;
+}
+.name{
+color:red;
+}
+.supSrcipt{
+font-size:0.5em;
+}
+.date{
+color:#3a3333;
+}
+
+.iconSvg{
+background-image: url('./app/svg/tag.svg');
+background-repeat: no-repeat;
+height: 15px;
+width: 15px;
+float: left;
+}
+
+.productHightlights div{
+font-size: 0.8em;
+}
+.review{
+margin: 5px 0; 
+}
+
+@media only screen and (min-width: 320px) and (max-width: 720px) {
+.productInfo {
+width: 100%;
+flex-direction: column;
+}
+.productInfoWrapper{
+flex-direction:  column;
+}
+.reviewWrapper{
+width: 100%;
+}
+
+.productTitle{
+font-size: 1.2em;
+text-align: center;
+}
+
+.productInfoLeft, .productInfoRight{
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+margin:0;
+
+}
+
+.productImg{
+width: 100%;
+
+margin: 20px 10px;
+}
+.addtoCart, .pickup{
+padding: 10px 5px;
+/* min-width: 190px; */
+flex: 1;
+min-width:0!important;
+margin: 5px;
+}
+.productAction{
+display: flex;
+}
+
+.review{
+
+margin: 5px 0;
+letter-spacing: 0.25px;
+line-height: 1.2;
+}
+.btnExtrasProduct {
+flex-grow: 1;
+
+}
+
+.productExtraAction {
+justify-content: space-between;
+}
+.productPrice{
+margin: 0;
+padding-bottom: 20px;
+}
+.carousel{
+height: auto;
+width: 100%;
+}
+}
