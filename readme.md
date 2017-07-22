@@ -1,4 +1,5 @@
 Getting started
+simple one page product information page with components and one service.
 
 For the application,
 
