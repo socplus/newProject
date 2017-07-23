@@ -39,19 +39,7 @@ ngOnInit(): void {
   this.price=this.productInfo.Offers[0].OfferPrice[0].formattedPriceValue;
   this.priceQualifier=this.productInfo.Offers[0].OfferPrice[0].priceQualifier;
 
-
-this.features= [
-"<strong>Wattage Output:<\/strong> 1100 Watts",
-"<strong>Number of Speeds:<\/strong> 3 ",
-"<strong>Capacity (volume):<\/strong> 72.0 Oz.",
-"<strong>Appliance Capabilities:<\/strong> Blends",
-"<strong>Includes:<\/strong> Travel Lid",
-"<strong>Material:<\/strong> Plastic",
-"<strong>Finish:<\/strong> Painted",
-"<strong>Metal Finish:<\/strong> Chrome",
-"<strong>Safety and Security Features:<\/strong> Non-Slip Base",
-"<strong>Care and Cleaning:<\/strong> Easy-To-Clean, Dishwasher Safe Parts"
-]
+this.features= this.productInfo.ItemDescription["0"].features; 
 });
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import  {CssProperty } from './Cssproperty';
+import { AppServices }  from './app.service';
 
 
 @Component({
@@ -13,6 +14,7 @@ count: number = 1;
 numberOfImages: number;
 pushTranslation:number=100;
 translationXnum:string;
+productInfo = <any>[];
 
 redCol:string;
 propertyArray: CssProperty[] = [];
@@ -20,9 +22,17 @@ statePush:number;
 activeIndex:number=2;
 prevActiveIndex:number=0;
 targetImg:string='';
-ngOnInit(): void{
+AlternateImages =<any>[];
 
+constructor(private appService: AppServices){}
+ngOnInit(): void{
+this.appService.getProductData().subscribe( (result) => {
+  this.productInfo=result.CatalogEntryView[0];
+this.AlternateImages= this.productInfo.Images["0"].AlternateImages;
+console.log('aletrnaet', this.AlternateImages);
 this._setInitial();
+
+});
 
 }
 
@@ -86,6 +96,9 @@ this.setPropertyToCarousel(2,70);
 }
 
 
+
+
+/*
 AlternateImages=[
 {
  "image": "http:\/\/target.scene7.com\/is\/image\/Target\/14263758_Alt01"
@@ -108,6 +121,6 @@ AlternateImages=[
 {
  "image": "http:\/\/target.scene7.com\/is\/image\/Target\/14263758_Alt07"
 }
-]
+]*/
 
 }

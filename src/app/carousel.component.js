@@ -5,43 +5,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var Cssproperty_1 = require("./Cssproperty");
+var app_service_1 = require("./app.service");
 var CarouselComponent = (function () {
-    function CarouselComponent() {
+    function CarouselComponent(appService) {
+        this.appService = appService;
         this.count = 1;
         this.pushTranslation = 100;
+        this.productInfo = [];
         this.propertyArray = [];
         this.activeIndex = 2;
         this.prevActiveIndex = 0;
         this.targetImg = '';
-        this.AlternateImages = [
-            {
-                "image": "http:\/\/target.scene7.com\/is\/image\/Target\/14263758_Alt01"
-            },
-            {
-                "image": "http:\/\/target.scene7.com\/is\/image\/Target\/14263758_Alt02"
-            },
-            {
-                "image": "http:\/\/target.scene7.com\/is\/image\/Target\/14263758_Alt03"
-            },
-            {
-                "image": "http:\/\/target.scene7.com\/is\/image\/Target\/14263758_Alt04"
-            },
-            {
-                "image": "http:\/\/target.scene7.com\/is\/image\/Target\/14263758_Alt05"
-            },
-            {
-                "image": "http:\/\/target.scene7.com\/is\/image\/Target\/14263758_Alt06"
-            },
-            {
-                "image": "http:\/\/target.scene7.com\/is\/image\/Target\/14263758_Alt07"
-            }
-        ];
+        this.AlternateImages = [];
     }
     CarouselComponent.prototype.ngOnInit = function () {
-        this._setInitial();
+        var _this = this;
+        this.appService.getProductData().subscribe(function (result) {
+            _this.productInfo = result.CatalogEntryView[0];
+            _this.AlternateImages = _this.productInfo.Images["0"].AlternateImages;
+            console.log('aletrnaet', _this.AlternateImages);
+            _this._setInitial();
+        });
     };
     CarouselComponent.prototype._setInitial = function () {
         this.numberOfImages = this.AlternateImages.length;
@@ -100,7 +90,8 @@ CarouselComponent = __decorate([
         selector: 'carousel',
         templateUrl: './carousel.component.html',
         styleUrls: ['./carousel.component.css']
-    })
+    }),
+    __metadata("design:paramtypes", [app_service_1.AppServices])
 ], CarouselComponent);
 exports.CarouselComponent = CarouselComponent;
 //# sourceMappingURL=carousel.component.js.map
